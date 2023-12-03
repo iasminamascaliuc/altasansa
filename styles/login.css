@@ -1,0 +1,61 @@
+.mainContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
+}
+
+.loginContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  text-align: center;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+button[type="submit"] {
+  background-color: #eba0c9;
+  color: white;
+  border: none;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+  background-color: red;
+  cursor: pointer;
+}
+
+.registerLink {
+  margin-top: 10px;
+}
+
+.registerLink a {
+  background-color: #eba0c9;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.registerLink a:hover {
+  background-color: red;
+  cursor: pointer;
+}

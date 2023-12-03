@@ -1,0 +1,47 @@
+.mainContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.registerContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  text-align: center;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+button[type="submit"] {
+  background-color: #eba0c9;
+  color: white;
+  border: none;
+  padding: 10px;
+}
+
+button[type="submit"]:hover {
+  background-color: red;
+  cursor: pointer;
+}
+
+.message {
+  color: black;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}

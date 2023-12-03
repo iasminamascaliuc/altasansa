@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/body.css" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/navbar.css" />
+    <link rel="stylesheet" href="styles/login.css" />
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="script/validateEmail.js"></script>
+    <title>Logare - Altă șansă</title>
+  </head>
+  <body>
+    <div id="navPlaceholder"></div>
+    <script>
+      $(function () {
+        $("#navPlaceholder").load("navbar.html");
+      });
+    </script>
+    <script src="script/dropdown.js"></script>
+    <div class="mainContainer">
+      <div class="loginContainer">
+        <p>Conectează-te pentru a vizualiza informații despre contul tău.</p>
+        <form onsubmit="submitForm(event)">
+          <input type="email" name="email" placeholder="Email" required />
+          <input
+            type="password"
+            name="password"
+            placeholder="Parola"
+            required
+          />
+          <button type="submit">Conectare</button>
+        </form>
+        <br />
+        <div class="registerLink">
+          <a href="register.html">Înregistrare</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

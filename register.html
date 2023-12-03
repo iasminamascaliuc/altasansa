@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/body.css" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/navbar.css" />
+    <link rel="stylesheet" href="styles/register.css" />
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("form").on("submit", function (event) {
+          event.preventDefault();
+          $.ajax({
+            type: "POST",
+            url: "register.php",
+            data: $(this).serialize(),
+            success: function (response) {
+              $(".registerContainer .message").html(response);
+              $(
+                'input[type="text"], input[type="text"], input[type="email"], input[type="password"]'
+              ).val("");
+            },
+          });
+        });
+      });
+    </script>
+    <title>Înregistrare - Altă șansă</title>
+  </head>
+  <body>
+    <div id="navPlaceholder"></div>
+    <script>
+      $(function () {
+        $("#navPlaceholder").load("navbar.html");
+      });
+    </script>
+    <div class="mainContainer">
+      <div class="registerContainer">
+        <p>Creează un cont nou</p>
+        <div class="message"></div>
+        <form method="POST">
+          <input type="text" name="name" placeholder="Nume" required />
+          <input type="text" name="surname" placeholder="Prenume" required />
+          <input type="email" name="email" placeholder="Email" required />
+          <input
+            type="password"
+            name="password"
+            placeholder="Parola"
+            required
+          />
+          <button type="submit" name="register">Înregistrare</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
